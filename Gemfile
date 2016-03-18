@@ -4,6 +4,7 @@ ruby "2.3.0"
 
 gem "active_type"
 gem "autoprefixer-rails"
+gem "devise"
 gem "flutie"
 gem "high_voltage"
 gem "jquery-rails"

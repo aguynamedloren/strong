@@ -47,6 +47,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    bcrypt (3.1.11)
     bootstrap (4.0.0.alpha3)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
@@ -92,6 +93,13 @@ GEM
       safe_yaml (~> 1.0.0)
     database_cleaner (1.5.1)
     debug_inspector (0.0.2)
+    devise (3.5.6)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
     dotenv (2.1.0)
@@ -139,6 +147,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     normalize-rails (3.0.3)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -189,6 +198,8 @@ GEM
     recipient_interceptor (0.1.2)
       mail
     redis (3.2.2)
+    responders (2.1.1)
+      railties (>= 4.2.0, < 5.1)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -273,6 +284,8 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uniform_notifier (1.9.0)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (3.1.1)
       activemodel (>= 4.2)
       debug_inspector
@@ -300,6 +313,7 @@ DEPENDENCIES
   bundler-audit (>= 0.5.0)
   capybara-webkit
   database_cleaner
+  devise
   dotenv-rails
   factory_girl_rails
   flutie
