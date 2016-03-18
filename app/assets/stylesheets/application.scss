@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+// Dependencies
 @import "normalize-rails";
-
 @import "bootstrap";
+
+// App setup
+@import "colors";
+@import "fonts";
+@import "base";
+
+// App styles
+@import "alerts";
+@import "forms";

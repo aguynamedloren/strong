@@ -1,0 +1,32 @@
+.btn-primary-outline {
+  color: $blue;
+  border-color: $blue;
+
+  &:hover {
+    background-color: $blue;
+    border-color: $blue;
+  }
+}
+
+.form-control {
+  background-color: #434857;
+  border: 0;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+.radio label input:only-child, .checkbox label input:only-child {
+  margin-right: 0.75em;
+}
+
+.btn {
+  @extend .btn-primary-outline;
+}
+
+.simple_form {
+  @extend .m-b-2;
+}
+
+abbr[title], abbr[data-original-title] {
+  display: none;
+}

@@ -1,0 +1,20 @@
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: $background-color;
+  color: $main-font-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-top: 50px;
+}
+
+a {
+  color: $blue;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

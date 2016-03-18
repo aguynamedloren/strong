@@ -1,11 +1,9 @@
-.container
-  h2
+.col-sm-4.center-block.pull-xs-none
+  h4.m-b-2
     | Log in
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    .form-inputs
-      = f.input :email, required: false, autofocus: true
-      = f.input :password, required: false
-      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
-    .form-actions
-      = f.button :submit, "Log in"
+    = f.input :email, required: false, autofocus: true
+    = f.input :password, required: false
+    = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+    = f.button :submit, "Log in"
   = render "devise/shared/links"
