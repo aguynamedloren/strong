@@ -1,0 +1,6 @@
+= yield :javascript
+
+- if Rails.env.test?
+  javascript:
+    $.fx.off = true;
+    $.ajaxSetup({ async: false });
