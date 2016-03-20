@@ -1,0 +1,29 @@
+Workout Date,Routine,Exercise,Set Order,Weight,Weight Units,Reps,Distance,Distance Units,Time
+2016-03-10 21:45:26,Legs,Leg Press,1,180,lbs,10
+2016-03-10 21:45:26,Legs,Leg Press,2,200,lbs,10
+2016-03-10 21:45:26,Legs,Leg Press,3,220,lbs,10
+2016-03-10 21:45:26,Legs,Leg Press,4,240,lbs,10
+2016-03-10 21:45:26,Legs,Seated Leg Curl,1,100,lbs,10
+2016-03-10 21:45:26,Legs,Seated Leg Curl,2,120,lbs,10
+2016-03-10 21:45:26,Legs,Seated Leg Curl,3,140,lbs,8
+2016-03-10 21:45:26,Legs,Leg Extension,1,40,lbs,10
+2016-03-10 21:45:26,Legs,Leg Extension,2,60,lbs,10
+2016-03-10 21:45:26,Legs,Leg Extension,3,100,lbs,10
+2016-03-11 19:34:10,Arms & Back,Seated Row,1,65,lbs,10
+2016-03-11 19:34:10,Arms & Back,Seated Row,2,95,lbs,10
+2016-03-11 19:34:10,Arms & Back,Seated Row,3,135,lbs,8
+2016-03-11 19:34:10,Arms & Back,Lat Pulldown,1,80,lbs,10
+2016-03-11 19:34:10,Arms & Back,Lat Pulldown,2,110,lbs,10
+2016-03-11 19:34:10,Arms & Back,Lat Pulldown,3,125,lbs,10
+2016-03-11 19:34:10,Arms & Back,Hammer Curl (Dumbbells),1,17.5,lbs,15
+2016-03-11 19:34:10,Arms & Back,Hammer Curl (Dumbbells),2,17.5,lbs,12
+2016-03-11 19:34:10,Arms & Back,Hammer Curl (Dumbbells),3,17.5,lbs,12
+2016-03-11 19:34:10,Arms & Back,Upright Row (Dumbbell),1,20,lbs,10
+2016-03-11 19:34:10,Arms & Back,Upright Row (Dumbbell),2,20,lbs,10
+2016-03-11 19:34:10,Arms & Back,Upright Row (Dumbbell),3,20,lbs,10
+2016-03-11 19:34:10,Arms & Back,Reverse Wrist Curl,1,40,lbs,15
+2016-03-11 19:34:10,Arms & Back,Reverse Wrist Curl,2,40,lbs,15
+2016-03-11 19:34:10,Arms & Back,Reverse Wrist Curl,3,40,lbs,15
+2016-03-11 19:34:10,Arms & Back,Bicep Curl,1,40,lbs,10
+2016-03-11 19:34:10,Arms & Back,Bicep Curl,2,40,lbs,10
+2016-03-11 19:34:10,Arms & Back,Bicep Curl,3,40,lbs,10

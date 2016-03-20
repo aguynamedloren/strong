@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  mount_griddler
+
   devise_for :users
 
   devise_scope :user do
