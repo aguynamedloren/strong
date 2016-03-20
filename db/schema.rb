@@ -11,10 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318081818) do
+ActiveRecord::Schema.define(version: 20160320103134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "exercise_sets", force: :cascade do |t|
+    t.integer  "order"
+    t.float    "weight"
+    t.string   "weight_units"
+    t.integer  "reps"
+    t.float    "distance"
+    t.string   "distance_units"
+    t.string   "time"
+    t.integer  "exercise_id"
+    t.integer  "workout_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "exercise_sets", ["exercise_id"], name: "index_exercise_sets_on_exercise_id", using: :btree
+  add_index "exercise_sets", ["workout_id"], name: "index_exercise_sets_on_workout_id", using: :btree
+
+  create_table "exercises", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "exercises", ["user_id"], name: "index_exercises_on_user_id", using: :btree
+
+  create_table "routines", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "routines", ["user_id"], name: "index_routines_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -39,4 +74,18 @@ ActiveRecord::Schema.define(version: 20160318081818) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "workouts", force: :cascade do |t|
+    t.datetime "date"
+    t.integer  "routine_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "workouts", ["routine_id"], name: "index_workouts_on_routine_id", using: :btree
+
+  add_foreign_key "exercise_sets", "exercises"
+  add_foreign_key "exercise_sets", "workouts"
+  add_foreign_key "exercises", "users"
+  add_foreign_key "routines", "users"
+  add_foreign_key "workouts", "routines"
 end
