@@ -1,2 +1,23 @@
 h4.m-b-2
-  | Exercise
+  = @exercise.name
+
+.table
+  .table-header
+    .col-sm-3
+      | Exercise Date
+    .col-sm-3
+      | Weight
+    .col-sm-3
+      | Reps
+    .col-sm-3
+      | Set Order
+  - @exercise_sets.each do |set|
+    .table-row
+      .col-sm-3
+        = set.workout_date
+      .col-sm-3
+        = set.weight_with_units
+      .col-sm-3
+        = set.reps
+      .col-sm-3
+        = set.order

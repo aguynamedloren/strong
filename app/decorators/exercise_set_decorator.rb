@@ -5,8 +5,12 @@ class ExerciseSetDecorator < Draper::Decorator
     "%g" % ("%.2f" % weight)
   end
 
+  def weight_with_units
+    "#{formatted_weight} #{weight_units}"
+  end
+
   def volume
-    "#{formatted_weight} #{weight_units} x #{reps}"
+    "#{weight_with_units} x #{reps}"
   end
 
   def workout_date
