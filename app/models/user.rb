@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include UuidToParam
+  
   devise :confirmable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 

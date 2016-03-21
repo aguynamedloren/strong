@@ -1,4 +1,6 @@
 class Workout < ActiveRecord::Base
+  include UuidToParam
+  
   belongs_to :routine
   has_many :exercise_sets
 
