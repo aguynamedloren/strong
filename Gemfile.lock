@@ -20,6 +20,8 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_median (0.1.2)
+      activerecord
     active_type (0.4.5)
       activerecord (>= 3.2)
     activejob (4.2.6)
@@ -79,6 +81,7 @@ GEM
     capybara-webkit (1.8.0)
       capybara (>= 2.3.0, < 2.7.0)
       json
+    chartkick (1.4.2)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -130,6 +133,8 @@ GEM
       rails (>= 3.2.0)
     griddler-mailgun (1.0.2)
       griddler
+    groupdate (2.5.2)
+      activesupport (>= 3)
     haml (4.0.7)
       tilt
     hashdiff (0.3.0)
@@ -316,6 +321,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_median
   active_type
   autoprefixer-rails
   awesome_print
@@ -324,6 +330,7 @@ DEPENDENCIES
   bullet
   bundler-audit (>= 0.5.0)
   capybara-webkit
+  chartkick
   database_cleaner
   devise
   dotenv-rails
@@ -333,6 +340,7 @@ DEPENDENCIES
   formulaic
   griddler
   griddler-mailgun
+  groupdate
   high_voltage
   jquery-rails
   launchy

@@ -1,5 +1,23 @@
 h4.m-b-2
+  = link_to "Exercises", exercises_path
+  = " - "
   = @exercise.name
+
+= line_chart @chart.data, library: @chart.options
+
+.m-b-2.text-sm-center
+  .btn-group.m-r-2
+    = link_to "Day", { time_interval: :day }, class: "btn active"
+    = link_to "Week", { time_interval: :week }, class: "btn"
+
+  .btn-group.m-r-2
+    = link_to "Maximum", { query_type: :maximum }, class: "btn active"
+    = link_to "Average", { query_type: :average }, class: "btn"
+
+  .btn-group
+    = link_to "Weight", { measure: :weight }, class: "btn active"
+    = link_to "1RM", { measure: :one_rep_max }, class: "btn"
+    = link_to "Volume", { measure: :volume }, class: "btn"
 
 .table
   .table-header

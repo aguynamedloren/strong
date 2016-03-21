@@ -1,0 +1,48 @@
+.btn-primary-outline {
+  color: $blue;
+  border-color: $blue;
+
+  &:hover {
+    background-color: $blue;
+    border-color: $blue;
+  }
+}
+
+.btn {
+  @extend .btn-primary-outline;
+}
+
+.btn-primary-outline:focus,
+.btn:focus,
+.btn-primary-outline.focus,
+.focus.btn,
+.btn-primary-outline:active,
+.btn:active,
+.btn-primary-outline.active,
+.active.btn,
+.open > .btn-primary-outline.dropdown-toggle,
+.open > .dropdown-toggle.btn {
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.btn-group {
+  .btn {
+    color: #cfd2da;
+    border-color: #434857;
+  }
+
+  .btn-primary-outline:focus,
+  .btn:focus,
+  .btn-primary-outline.focus,
+  .focus.btn,
+  .btn-primary-outline:active,
+  .btn:active,
+  .btn-primary-outline.active,
+  .active.btn,
+  .open > .btn-primary-outline.dropdown-toggle,
+  .open > .dropdown-toggle.btn {
+    background-color: #434857;
+    border-color: #434857;
+  }
+}

@@ -11,5 +11,12 @@ class ExercisesController < ApplicationController
     @exercise_sets = ExerciseSetDecorator.decorate_collection(
       @exercise.exercise_sets
     )
+
+    @chart = ChartBuilder.new(
+      @exercise,
+      params[:time_interval],
+      params[:query_type],
+      params[:measure]
+    )
   end
 end
