@@ -1,0 +1,16 @@
+.table-row, .table-header {
+  @include clearfix;
+  color: #cfd2da;
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  margin-bottom: -1px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #434857;
+}
+
+.table-row:hover {
+  text-decoration: none;
+  color: #cfd2da;
+  background-color: #434857;
+}

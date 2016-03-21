@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     get "logout", to: "devise/sessions#destroy"
     get "signup", to: "devise/registrations#new"
   end
+
+  resources :exercises
 end

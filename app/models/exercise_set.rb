@@ -4,4 +4,7 @@ class ExerciseSet < ActiveRecord::Base
 
   validates :exercise, presence: true
   validates :workout, presence: true
+
+  scope :sorted_by_date, -> { joins(:workout).order("workouts.date asc") }
+  scope :sorted_by_weight, -> { order(weight: :asc, reps: :asc) }
 end

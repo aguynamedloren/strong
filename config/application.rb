@@ -12,7 +12,7 @@ module Strong
   class Application < Rails::Application
     config.autoload_paths += %W(
       #{config.root}/app/jobs
-      #{config.root}/app/presenters
+      #{config.root}/app/decorators
       #{config.root}/app/services
       #{config.root}/lib
     )

@@ -1,0 +1,23 @@
+h4.m-b-2
+  | Exercises
+
+.table
+  .table-header
+    .col-sm-3
+      | Exercise
+    .col-sm-3
+      | Personal Record
+    .col-sm-3
+      | Last Completed
+    .col-sm-3
+      | Total sets
+  - @exercises.each do |exercise|
+    = link_to exercise_path(exercise), class: "table-row" do
+      .col-sm-3
+        = exercise.name
+      .col-sm-3
+        = exercise.personal_record_set.volume
+      .col-sm-3
+        = exercise.most_recent_set.workout_date
+      .col-sm-3
+        = exercise.exercise_sets.count
