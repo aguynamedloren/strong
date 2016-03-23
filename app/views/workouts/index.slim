@@ -1,0 +1,23 @@
+h4.m-b-2
+  | Workouts
+
+.table
+  .table-header
+    .col-sm-3
+      | Workout Date
+    .col-sm-3
+      | Routine
+    .col-sm-3
+      | Exercises
+    .col-sm-3
+      | Total Sets
+  - @workouts.each do |workout|
+    = link_to workout_path(workout), class: "table-row" do
+      .col-sm-3
+        = workout.workout_date
+      .col-sm-3
+        = workout.routine.name
+      .col-sm-3
+        = workout.exercise_sets.group_by(&:exercise).count
+      .col-sm-3
+        = workout.exercise_sets.count

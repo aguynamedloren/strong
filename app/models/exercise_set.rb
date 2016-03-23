@@ -8,6 +8,7 @@ class ExerciseSet < ActiveRecord::Base
   validates :workout, presence: true
 
   scope :sorted_by_date, -> { joins(:workout).order("workouts.date asc") }
+  scope :sorted_by_type, -> { order(exercise_id: :asc, order: :asc) }
   scope :sorted_by_weight, -> { order(weight: :asc, reps: :asc) }
 
   before_create :calculate_weights

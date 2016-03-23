@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
 
   resources :exercises
+  resources :workouts
 end
