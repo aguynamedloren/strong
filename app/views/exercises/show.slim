@@ -7,17 +7,17 @@ h4.m-b-2
 
 .m-b-2.text-sm-center
   .btn-group.m-r-2
-    = link_to "Day", { time_interval: :day }, class: "btn active"
-    = link_to "Week", { time_interval: :week }, class: "btn"
+    = chart_filter "Day", "time_interval", "day", default: true
+    = chart_filter "Week", "time_interval", "week"
 
   .btn-group.m-r-2
-    = link_to "Maximum", { query_type: :maximum }, class: "btn active"
-    = link_to "Average", { query_type: :average }, class: "btn"
+    = chart_filter "Maximum", "query_type", "maximum", default: true
+    = chart_filter "Average", "query_type", "average"
 
   .btn-group
-    = link_to "Weight", { measure: :weight }, class: "btn active"
-    = link_to "1RM", { measure: :one_rep_max }, class: "btn"
-    = link_to "Volume", { measure: :volume }, class: "btn"
+    = chart_filter "Weight", "measure", "weight", default: true
+    = chart_filter "1RM", "measure", "one_rep_max"
+    = chart_filter "Volume", "measure", "volume"
 
 .table
   .table-header
