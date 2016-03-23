@@ -21,21 +21,29 @@ h4.m-b-2
 
 .table
   .table-header
-    .col-sm-3
+    .col-sm-2
       | Exercise Date
-    .col-sm-3
+    .col-sm-2
       | Weight
-    .col-sm-3
+    .col-sm-2
+      | 1RM
+    .col-sm-2
+      | Volume
+    .col-sm-2
       | Reps
-    .col-sm-3
+    .col-sm-2
       | Set Order
   - @exercise_sets.each do |set|
     .table-row
-      .col-sm-3
+      .col-sm-2
         = set.workout_date
-      .col-sm-3
+      .col-sm-2
         = set.weight_with_units
-      .col-sm-3
+      .col-sm-2
+        = set.one_rep_max_with_units
+      .col-sm-2
+        = set.volume_with_units
+      .col-sm-2
         = set.reps
-      .col-sm-3
+      .col-sm-2
         = set.order

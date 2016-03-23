@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321004246) do
+ActiveRecord::Schema.define(version: 20160323103418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,10 +30,16 @@ ActiveRecord::Schema.define(version: 20160321004246) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.uuid     "uuid",           default: "uuid_generate_v4()"
+    t.float    "one_rep_max"
+    t.float    "volume"
   end
 
   add_index "exercise_sets", ["exercise_id"], name: "index_exercise_sets_on_exercise_id", using: :btree
+  add_index "exercise_sets", ["one_rep_max"], name: "index_exercise_sets_on_one_rep_max", using: :btree
+  add_index "exercise_sets", ["reps"], name: "index_exercise_sets_on_reps", using: :btree
   add_index "exercise_sets", ["uuid"], name: "index_exercise_sets_on_uuid", unique: true, using: :btree
+  add_index "exercise_sets", ["volume"], name: "index_exercise_sets_on_volume", using: :btree
+  add_index "exercise_sets", ["weight"], name: "index_exercise_sets_on_weight", using: :btree
   add_index "exercise_sets", ["workout_id"], name: "index_exercise_sets_on_workout_id", using: :btree
 
   create_table "exercises", force: :cascade do |t|
