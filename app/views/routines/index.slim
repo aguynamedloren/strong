@@ -1,0 +1,21 @@
+h4.m-b-2
+  | Routines
+
+.table
+  .table-header
+    .col-sm-3
+      | Routine
+    .col-sm-3
+      | Last Workout
+    .col-sm-3
+      | Workouts
+    .col-sm-3
+  - @routines.each do |routine|
+    = link_to routine, class: "table-row" do
+      .col-sm-3
+        = routine.name
+      .col-sm-3
+        = routine.most_recent_workout.workout_date
+      .col-sm-3
+        = routine.workouts.count
+      .col-sm-3
