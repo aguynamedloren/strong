@@ -5,33 +5,24 @@ h4.m-b-2
   = " - "
   = @workout.routine.name
 
-.table
-  .table-header
-    .col-sm-2
-      | Exercise
-    .col-sm-2
-      | Weight
-    .col-sm-2
-      | 1RM
-    .col-sm-2
-      | Volume
-    .col-sm-2
-      | Reps
-    .col-sm-2
-      | Set Order
-  - @exercise_groups.each do |exercise_group|
+- @exercise_groups.each do |exercise_group|
+  .table
+    .table-header
+      .col-sm-3
+        = link_to exercise_group[0].name, exercise_group[0] 
+      .col-sm-3
+        | Weight
+      .col-sm-3
+        | 1RM
+      .col-sm-3
+        | Volume
     - exercise_group[1].each do |set|
       .table-row
-        .col-sm-2
-          = set.exercise.name
-        .col-sm-2
-          = set.weight_with_units
-        .col-sm-2
-          = set.one_rep_max_with_units
-        .col-sm-2
-          = set.volume_with_units
-        .col-sm-2
-          = set.reps
-        .col-sm-2
+        .col-sm-3
           = set.order
-    br
+        .col-sm-3
+          = set.weight_and_reps
+        .col-sm-3
+          = set.one_rep_max_with_units
+        .col-sm-3
+          = set.volume_with_units
